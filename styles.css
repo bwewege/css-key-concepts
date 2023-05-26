@@ -1,33 +1,60 @@
+body {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: -webkit-linear-gradient(-45deg, #a9e4f7 0%, #0fb4e7 100%);
+}
+ 
 header {
-  background-color: #f2f2f2;
+  background-color: #222;
   padding: 10px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
+ 
+header h1 {
+  margin: 0;
+}
+
 
 header a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
-  margin-right: 10px;
 }
 
-header a:hover {
-  color: #555;
+header .phone-number {
+  display: flex;
+  align-items: centre;
+  justify-content: flex-end;
 }
 
-nav {
-  background-color: #f2f2f2;
+header .fa-phone {
+  color: #fff;
+  margin-right: 5px;
 }
 
 nav ul {
+  background-color:#222;
+  border:1px solid grey;
+  z-index: 1;
+  top:50%;
+  left:50%;
   list-style-type: none;
   margin: 0;
-  padding: 0;
   display: flex;
+  outline:none;
 }
+
+nav a:hover {
+  background-color: #fff;
+  color: #121212;
+
+}
+
+
 
 nav li {
   margin-right: 10px;
@@ -36,16 +63,12 @@ nav li {
 nav a {
   display: block;
   padding: 10px;
-  color: #333;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
-  background-color: #ccc;
-  color: #555;
-}
-
+/*
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -123,4 +146,4 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #555;
-}
+} */ */
