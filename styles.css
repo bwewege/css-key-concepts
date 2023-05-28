@@ -1,63 +1,56 @@
 body {
-  font-size: 16px;
-  width: 100%;
-  height: 100%;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background: -webkit-linear-gradient(-45deg, #a9e4f7 0%, #0fb4e7 100%);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
- 
+
 header {
-  background-color: #222;
-  padding: 10px;
+  background-color: #ff6b6b;
+  padding: 15px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
- 
-header h1 {
-  margin: 0;
-}
 
-
-header a {
+header a:first-child {
   color: #fff;
-  text-decoration: none;
+  font-size: 24px;
   font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+  text-decoration: none;
 }
 
-header .phone-number {
-  display: flex;
-  align-items: centre;
-  justify-content: flex-end;
-}
-
-header .fa-phone {
+header a:last-child {
   color: #fff;
-  margin-right: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav ul {
-  background-color:#222;
-  border:1px solid grey;
+  background-color: #ff9f1a;
+
   z-index: 1;
-  top:50%;
-  left:50%;
   list-style-type: none;
   margin: 0;
   display: flex;
-  outline:none;
+  align-items: baseline;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+nav label {
+  font-weight: bold;
+  width: 80px;
 }
 
 nav a:hover {
-  background-color: #fff;
+  background-color: #ff6b6b;
   color: #121212;
-
-}
-
-
-
-nav li {
-  margin-right: 10px;
 }
 
 nav a {
@@ -68,55 +61,90 @@ nav a {
   font-weight: bold;
 }
 
-/*
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
+nav div {
+  display: flex;
+  align-items: center;
 }
 
-label {
+nav label,
+nav .search-input {
+  margin: 0;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+
+nav button {
   font-weight: bold;
 }
 
-section {
-  margin-bottom: 20px;
+body {
+  position: relative;
 }
 
-h2,
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./surgery.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(1.2) saturate(1.2);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.covid-section {
+  background-color: rgba(249, 249, 249, 0.7);
+  padding: 20px;
+  border: 1px solid #ff6b6b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.covid-section strong {
+  color: #ff6b6b;
+}
+
 h3 {
-  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6b6b;
 }
 
-h3 strong {
-  color: #555;
+.container {
+  display: flex;
+  justify-content: center;
 }
 
-p {
-  line-height: 1.5;
+.address-section,
+.video-section {
+  flex: 1;
+  text-align: center;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-address {
-  margin-top: 10px;
-  font-style: normal;
-}
-
-video {
-  max-width: 100%;
-  height: auto;
+.feedback-form {
+  text-align: center;
+  padding: 20px;
+  background-color: #ff9f1a;
+  border: 1px solid #ff6b6b;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
 }
 
 form {
-  margin-top: 20px;
+  display: inline-block;
+  text-align: left;
 }
 
 fieldset {
   border: none;
+  padding: 0;
 }
 
 legend {
@@ -124,26 +152,37 @@ legend {
   margin-bottom: 10px;
 }
 
-input[type="checkbox"],
-input[type="date"],
-input[type="email"],
-input[type="tel"],
-input[type="text"] {
+p {
+  font-weight: bold;
+}
+
+label {
+  display: inline-block;
+  width: 200px;
+  text-align: left;
   margin-bottom: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+}
+
+input[type="checkbox"],
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"] {
+  width: 200px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 input[type="submit"] {
+  display: block;
+  margin: 20px auto;
   padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
+  background-color: #ff9f1a;
+  border: 1px solid #ff6b6b;
   border-radius: 5px;
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background-color: #555;
-} */ */
+  background-color: #ffac4f;
+}
